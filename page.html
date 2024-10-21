@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civita Serv</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #1BA0E3; 
+            padding: 20px 0;
+            color: #fff;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px; 
+        }
+
+        form input[type="search"] {
+            padding: 15px;
+            border-radius: 5px 0 0 5px; 
+            border: 1px solid #ccc;
+            outline: none;
+            font-size: 16px;
+            width: 300px; 
+        }
+
+        form button {
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 0 5px 5px 0; 
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .topico {
+            background-image: url('imgs/ezgif-3-7d9c2fd275.gif');
+            background-size: cover;
+            background-position: center;
+            padding: 200px 60px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .topico h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .topico p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .topico .sbm {
+            background-color: #007BFF;
+            padding: 15px 30px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .subtopico {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 40px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .subtopico-s {
+            text-align: center;
+            width: 30%;
+        }
+
+        .subtopico-s i {
+            font-size: 40px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .subtopico-s h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .subtopico-s p {
+            color: #666;
+        }
+
+        .servicos {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .servicos h2 {
+            margin-bottom: 40px;
+            font-size: 30px;
+        }
+
+        .servicos .servicos-lista {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .servicos-item {
+            width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .servicos-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .contato-formulario {
+            background-color: #1BA0E3;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .contato-formulario form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contato-formulario input,
+        .contato-formulario textarea {
+            padding: 15px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        .contato-formulario button {
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #1B1F24;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <section class="container">
+            <article class="logo">
+                Civita Servidor
+            </article>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre a Civita</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Área do Cliente</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <section class="topico">
+            <article class="container">
+                <h1>Conheça nossos serviços!</h1>
+                <p>A Civita Servidor oferece ao cliente um atendimento diferenciado, específico para cada segmento de negócio.</p>
+                <a href="#" class="sbm">Saiba Mais</a>
+            </article>
+        </section>
+
+        <section class="subtopico">
+            <article class="subtopico-s">
+                <i class="fas fa-lock"></i>
+                <h3>Confiança</h3>
+                <p>Sobre ela estruturamos todas as nossas atividades, buscando fortalecimento a cada dia.</p>
+            </article>
+            <article class="subtopico-s">
+                <i class="fas fa-check-circle"></i>
+                <h3>Credibilidade</h3>
+                <p>Uma qualidade que se conquista com um trabalho que excede a confiança e o respeito.</p>
+            </article>
+            <article class="subtopico-s">
+                <i class="fas fa-balance-scale"></i>
+                <h3>Ética</h3>
+                <p>Um pilar fundamental baseado em nossos valores e no respeito às normas e regras.</p>
+            </article>
+        </section>
+
+        <section class="servicos">
+            <h2>Serviços</h2>
+            <form action="/buscar" method="get" role="search">
+                <label for="pesquisa" style="display: none;">Buscar:</label>
+                <div style="position: relative; display: flex; align-items: center;">
+                    <i class="fas fa-search" style="position: absolute; left: 10px; color: #007BFF;"></i>
+                    <input type="search" id="pesquisa" name="q" placeholder="Digite o serviço" aria-label="Pesquisar serviço" style="padding-left: 40px;"> <!-- Adicionando padding-left para o ícone -->
+                    <button type="submit">Pesquisar</button>
+                </div>
+            </form>    
+            <aside class="servicos-lista">
+                <article class="servicos-item">
+                    <h3>A</h3>
+                    <p>Descrição.</p>
+                </article>
+                <article class="servicos-item">
+                    <h3>B</h3>
+                    <p>Descrição.</p>
+                </article>
+                <article class="servicos-item">
+                    <h3>C</h3>
+                    <p>Descrição.</p>
+                </article>
+                <article class="servicos-item">
+                    <h3>D</h3>
+                    <p>Descrição.</p>
+                </article>
+                <article class="servicos-item">
+                    <h3>E</h3>
+                    <p>Descrição.</p>
+                </article>
+                <article class="servicos-item">
+                    <h3>F</h3>
+                    <p>Descrição.</p>
+                </article>
+            </aside>
+        </section>        
+
+        <section class="contato-formulario">
+            <h2>Fale Conosco</h2>
+            <form>
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu email" required>
+                <input type="tel" placeholder="Seu telefone" required>
+                <textarea placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <p>Ou entre em contato pelo telefone: (98) 0000-0000</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Astrosync Servidor. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
