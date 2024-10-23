@@ -1,45 +1,200 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro | AstroSync</title>
+    <title>Civita Serv - Cadastro</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #89e4e7, #cde2e9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        main {
+            display: flex;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 900px;
+            overflow: hidden;
+        }
+
+        .gif-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+        }
+
+        .form-container {
+            flex: 1.5;
+            padding: 15px;
+            background-color: #2eadc4;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        h1, h2 {
+            color: #ffffff;
+            font-size: 1.5em;
+        }
+
+        fieldset {
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #ffffff;
+            font-size: 0.9em;
+        }
+
+        input[type="text"], input[type="email"], input[type="date"], input[type="tel"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            margin-bottom: 12px;
+            background-color: #2eadc4;
+            color: #ffffff;
+            font-size: 0.9em;
+        }
+
+        input::placeholder {
+            color: #ffffff;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #ffffff;
+            color: #2eadc4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #f0f0f0;
+        }
+
+        .show-password {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            color: #ffffff;
+            font-size: 0.9em;
+        }
+
+        .show-password input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #2eadc4;
+            z-index: 9999;
+            display: none; 
+        }
+    </style>
 </head>
+
 <body>
-    <h1>AstroSync</h1>
-    <h2>Cadastro</h2>
-    <form>
-        <input type="text" name="nome" placeholder="Nome">
-        <br><br>
-        <input type="text" name="sobrenome" placeholder="Sobrenome">
-        <br><br>
-        <input type="email" name="email" placeholder="E-mail">
-        <br><br>
-        <input type="date" name="data_nascimento" placeholder="Data de nascimento">
-        <br><br>
-        <input type="number" name="numero" placeholder="(00) 0 0000-0000">
-        <br><br>
-        <input type="radio" id="masculino" name="genero" value="masculino">
-        <label for="masculino">Masculino</label>
-        <br>
-        <input type="radio" id="feminino" name="genero" value="masculino">
-        <label for="feminino">Feminino</label>
-        <br>
-        <input type="radio" id="outro" name="genero" value="outro">
-        <label for="outro">Outro</label>
-        <br>
-        <input type="radio" id="naoinformar" name="genero" value="naoinformar">
-        <label for="naoinformar">Prefiro não informar</label>
-        <br>
-        <br>
-        <input type="password" placeholder="Criar senha">
-        <br><br>
-        <input type="password" placeholder="Confirmar senha">
-        <br><br>
-        <input type="radio" id="aceito" name="termo" value="aceitar">
-        <label for="aceitar">Eu concordo em receber comunicações. Ao informar meus dados, <br>estou ciente das diretrizes da Política de Privacidade</label>
-        <br><br>
-        <button type="submit">Cadastrar</button>
-    </form>
+    <main>
+        <div class="gif-container">
+            <img src="imgs/System.gif" alt="Login Animation" style="max-width: 80%; height: auto; border-radius: 10px;">
+        </div>
+
+        <div class="form-container">
+            <header>
+                <h1>Civita Serv</h1>
+                <h2> Crie sua conta</h2>
+            </header>
+
+            <section>
+                <h2>Cadastro</h2>
+                <form action="#" method="POST">
+                    <fieldset>
+                        <legend>Informações Pessoais</legend>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Nome" required>
+
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="E-mail" required>
+
+                        <label for="data_nascimento">Data de nascimento:</label>
+                        <input type="date" id="data_nascimento" name="data_nascimento" required>
+
+                        <label for="numero">Telefone:</label>
+                        <input type="tel" id="numero" name="numero" placeholder="(00) 0 0000-0000" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Configuração da Senha</legend>
+
+                        <label for="senha">Criar senha:</label>
+                        <input type="password" id="senha" name="senha" placeholder="Criar senha" required>
+
+                        <label for="confirmar_senha">Confirmar senha:</label>
+                        <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Confirmar senha" required>
+
+                        <div class="show-password">
+                            <input type="checkbox" id="mostrar_senha" name="mostrar_senha">
+                            <label for="mostrar_senha">Mostrar senhas</label>
+                        </div>
+                    </fieldset>
+
+                    <input type="submit" value="Cadastrar">
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <div class="loading-screen" id="loadingScreen">
+        <p class="success-message">Carregando!</p>
+    </div>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function (event) {
+            event.preventDefault(); 
+
+            document.getElementById("loadingScreen").style.display = "flex";
+
+            setTimeout(function () {
+                window.location.href = "carregamento.html";
+            }, 3000);
+        });
+    </script>
 </body>
+
 </html>
